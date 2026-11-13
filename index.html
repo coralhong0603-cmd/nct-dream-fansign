@@ -130,7 +130,7 @@ document.querySelectorAll('.trk').forEach(function(t){
    h+='<div class="mem">';var paid=0,got=0;
    M.forEach(function(x){var mm=d.m[x];if(mm.p){paid++;if(per!==null)got+=per}
     h+='<div class="m"><b>'+x+'</b><input data-m="'+x+'" placeholder="谁买的" value="'+(mm.n||'').replace(/"/g,'&quot;')+'"><button class="pay'+(mm.p?' y':'')+'" data-m="'+x+'">'+(mm.p?'已付':'未付')+'</button></div>'});
-   h+='</div><div class="sum">已付 '+paid+'/6'+(per!==null?' · 已收 ¥'+money(got)+' · 待收 ¥'+money(per*(6-paid)):'')+'</div>';
+   h+='</div><div class="sum">已付 '+paid+'/6'+(per!==null?' · 已收 ¥'+money(got)+' · 待收 ¥'+money(tot-got):'')+'</div>';
   }
   t.innerHTML=h;
   t.querySelector('.buy').onclick=function(){d.b=!d.b;save();render();apply()};
