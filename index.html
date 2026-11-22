@@ -89,7 +89,7 @@ footer{text-align:center;font-size:12px;color:var(--mut);padding:0 16px 30px}
 function zoom(f){var l=document.getElementById('lb');l.querySelector('img').src=f.querySelector('img').src;l.style.display='flex'}
 (function(){
 var M=['娜','诺','星','乐','灿','俊'],DEF={娜:'yu',诺:'yu',星:'幸运',乐:'幸运',灿:'tt',俊:''},KEY='ndfs_track_v1';
-var SEED={e7:{_rev:2,b:true,t:'380',m:{娜:{n:'yu',p:false},诺:{n:'yu',p:false},星:{n:'幸运',p:false},乐:{n:'幸运',p:false},灿:{n:'tt',p:false},俊:{n:'Doris',p:false}}}};
+var SEED={e7:{_rev:3,b:true,t:'380',m:{娜:{n:'yu',p:true},诺:{n:'yu',p:true},星:{n:'幸运',p:true},乐:{n:'幸运',p:true},灿:{n:'tt',p:false},俊:{n:'Doris',p:true}}}};
 var D={};try{D=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
 function save(){localStorage.setItem(KEY,JSON.stringify(D))}
 Object.keys(SEED).forEach(function(k){if(!D[k]||(D[k]._rev||0)<SEED[k]._rev)D[k]=JSON.parse(JSON.stringify(SEED[k]))});
